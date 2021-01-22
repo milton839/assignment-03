@@ -1,6 +1,3 @@
-// https://github.com/milton839/assignment-03
-
-
 function kilometerToMeter(kilometer) {
     if (kilometer <= 0) {
         return "Error: Distance can not be Negative or Zero";
