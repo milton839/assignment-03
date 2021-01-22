@@ -1,25 +1,26 @@
 function kilometerToMeter(kilometer) {
-    if (kilometer < 0) {
-        return "Distance can not be Negative";
+    if (kilometer <= 0) {
+        return "Error: Distance can not be Negative or Zero";
     } else {
-        return meter = kilometer * 1000;
+        var meter = kilometer * 1000;
     }
+    return meter;
 }
-var result1 = kilometerToMeter(10);
+var result1 = kilometerToMeter(5);
 console.log(result1);
 //===========Convert Kilometer to Meter Part End================
 
 
 function budgetCalculator(watch, phone, laptop) {
-    if (watch < 0 || phone < 0 || laptop < 0) {
-        return "Negative value can not accepted";
+    if (watch <= 0 || phone <= 0 || laptop <= 0) {
+        return "Error: Negative value or Zero can not be accepted";
     } else {
         var watchPrice = watch * 50;
         var phonePrice = phone * 100;
         var laptopPrice = laptop * 500;
         var total = watchPrice + phonePrice + laptopPrice;
-        return total;
     }
+    return total;
 }
 var result2 = budgetCalculator(6, 7, 6);
 console.log(result2);
@@ -27,8 +28,8 @@ console.log(result2);
 
 
 function hotelCost(days) {
-    if (days < 0) {
-        return "Negative value can not be accepted";
+    if (days <= 0) {
+        return "Error: Negative value or Zero can not be accepted";
     }
     if (days <= 10) {
         var totalTk = days * 100;
@@ -46,23 +47,26 @@ function hotelCost(days) {
     }
     return totalTk;
 }
-var totalHotelCost = hotelCost(21);
+var totalHotelCost = hotelCost(25);
 console.log(totalHotelCost);
 //===========Hotet Cost Part End================
 
 
 function megaFriend(friends) {
     var length = 0;
+    if(friends.length==0||friends===undefined){
+        return "Error: Your array box is Empty";
+    }
     for (var i = 0; i < friends.length; i++) {
         var max = friends[i].length;
         if (max > length) {
             length = max;
             var result = friends[i];
+            return result;
         }
     }
-    return result;
 }
-var names = ['AzizulMilton', 'Firoj', 'Salimul', 'Saykat', 'Rofikul', 'Rasel', 'Abir'];
+var names = ['Azizul','Islam','Milton','Firoj','Apu','Abir','Saykat'];
 var bigName = megaFriend(names);
 console.log(bigName);
 //===========Mega Friend Part End================
